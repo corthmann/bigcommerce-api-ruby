@@ -237,6 +237,10 @@ module Bigcommerce
       @connection.get("/orders/#{id}", options)
     end
 
+    def create_order(options={})
+      @connection.post("/orders", options)
+    end
+
     def update_order(id,options={})
       @connection.put("/orders/#{id}", options)
     end
