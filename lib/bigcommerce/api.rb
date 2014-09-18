@@ -440,6 +440,14 @@ module Bigcommerce
       @connection.get("/products/#{product_id}/videos/#{video_id}", options)
     end
 
+    def shipping_methods(options = {})
+      @connection.get('shipping/methods', options)
+    end
+
+    def shipping_method(shipping_method_id, options = {})
+      @conntection.get("shipping/methods/#{shipping_method_id}", options)
+    end
+
     def count(result)
       result["count"]
     end
