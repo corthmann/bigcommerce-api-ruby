@@ -445,7 +445,7 @@ module Bigcommerce
     end
 
     def shipping_method(shipping_method_id, options = {})
-      @conntection.get("/shipping/methods/#{shipping_method_id}", options)
+      @connection.get("/shipping/methods/#{shipping_method_id}", options)
     end
 
     def count(result)
