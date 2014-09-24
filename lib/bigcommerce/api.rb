@@ -122,6 +122,14 @@ module Bigcommerce
       @connection.get("/customers", options)
     end
 
+    def create_customer(options = {})
+      @connection.post("/customers", options)
+    end
+
+    def delete_customer(id)
+      @connection.delete("/customers/#{id}")
+    end
+
     def customer(id)
       @connection.get('/customers/' + id.to_s, {})
     end
