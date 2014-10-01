@@ -253,6 +253,10 @@ module Bigcommerce
       @connection.put("/orders/#{id}", options)
     end
 
+    def delete_order(id)
+      @connection.delete("/orders/#{id}")
+    end
+
     def orders_coupons(id,options={})
       @connection.get("/orders/#{id}/coupons", options)
     end
