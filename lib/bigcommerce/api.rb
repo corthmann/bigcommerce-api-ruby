@@ -126,6 +126,10 @@ module Bigcommerce
       @connection.post("/customers", options)
     end
 
+    def update_customer(id, options={})
+      @connection.put("/customers/#{id}", options)
+    end
+
     def delete_customer(id)
       @connection.delete("/customers/#{id}")
     end
