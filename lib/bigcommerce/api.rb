@@ -486,7 +486,6 @@ module Bigcommerce
           count = buffer.count
           buffer.each do |item|
             yielder << klass.new(item, @connection)
-            p @connection.remaining_rate_limit
           end
           @page += 1
         end
